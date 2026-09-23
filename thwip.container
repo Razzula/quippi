@@ -1,0 +1,17 @@
+[Unit]
+Description=Thwip Qu control interface
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+Image=ghcr.io/razzula/thwip:latest
+Network=host
+Restart=always
+AutoUpdate=registry
+
+[Service]
+TimeoutStartSec=0
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target
