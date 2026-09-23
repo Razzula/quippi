@@ -12,7 +12,7 @@ echo "Reloading systemd..."
 sudo systemctl daemon-reload
 
 echo "Spinning up services..."
-sudo systemctl start quippi.service
-sudo systemctl start thwip.service
+sudo systemctl restart quippi.service
+sudo systemctl restart thwip.service
 
 echo "Installation complete."
