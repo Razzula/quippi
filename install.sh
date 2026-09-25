@@ -11,6 +11,9 @@ sudo cp thwip.container /etc/containers/systemd/
 echo "Reloading systemd..."
 sudo systemctl daemon-reload
 
+echo "Updating containers..."
+sudo podman auto-update
+
 echo "Spinning up services..."
 sudo systemctl restart quippi.service
 sudo systemctl restart thwip.service
